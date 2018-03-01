@@ -9,13 +9,21 @@
 2017年12月29日，在新年钟声敲响前的几十个小时，我们迎来了今年冬天最重最快的一场雾霾。早晨起来后就看到外面都是雾蒙蒙的一片，直到中午也没有好转。新闻里到处是雾霾的报导：保定重度污染，AQI254;信阳重度污染，AOI282;兰州重度污染，AQI466......短短几分钟的新闻让我不寒而栗。
 
 <div align=center>
-<img src="./pic/能见度实况.jpg" width = "600"/>
+<img src="./pic/2017年12月29日雾霾污染报导.jpg" width = "600"/>
+</div>
+
+<div align=center>
+2017年12月29日雾霾污染报导
 </div>
 
 晚上回家的时候听说隔壁王叔叔的儿子因为一直不停地咳嗽住院了，爸爸妈妈都说是这雾霾天闹的。隔壁张阿姨家因为刚怀上小宝宝，怕刚装修的房子污染大，对孕妇不好，所以到现在也没回来住。于是我去网上查了一下，不查不知道，一查吓一跳，原来每年有170万例5岁以下儿童死亡与环境污染有关。据世界卫生组织发布的报告显示，全球五岁以下儿童的死亡中，其中约有四分之一与环境污染有关，如空气污染、二手烟雾等。
 
 <div align=center>
 <img src="./pic/每年有170万例5岁以下儿童死亡与环境污染有关.jpg" width = "600"/>
+</div>
+
+<div align=center>
+每年有170万例5岁以下儿童死亡与环境污染有关
 </div>
 
 PM2.5和另外一些环境污染物也会影响宝宝与孕妇的身体健康：PM2.5会导致宝宝呼吸道感染、肺损伤、小儿佝偻病，像甲醛一类的装修污染气体也会导致孕妇体重降低，甚至增加宝宝畸形的概率。
@@ -25,7 +33,15 @@ PM2.5和另外一些环境污染物也会影响宝宝与孕妇的身体健康：
 </div>
 
 <div align=center>
+PM2.5危害
+</div>
+
+<div align=center>
 <img src="./pic/VOC危害.jpg" width = "600"/>
+</div>
+
+<div align=center>
+VOC危害
 </div>
 
 以上新闻深深刺痛了我，虽然我对这些专业术语不是很了解，但是我知道环境问题正严重影响着小朋友们和准妈妈们的健康。我们生活在同一片天空下，依靠个人的力量很难在短时间内改变周围的环境质量......我陷入了程思中——我要发明一个监控和报警装置，实时监控使用者周围的环境，一旦环境变得对人体有害，它就会报警并提醒使用者离开当前环境或者开窗通风。
@@ -64,17 +80,27 @@ A. 第一个部分是一个传感器模块，它分为三个主要部分,这三�
 <img src="./pic/系统框图.jpg" width = "600"/>
 </div>
 
+<div align=center>
+系统框图
+</div>
+
 B. 第二个部分是手机上的数据接收和报警功能部分，通过蓝牙让传感器模块和手机可以实时通讯。
 
 <div align=center>
-<img src="./pic/系统框图连手机.jpg" width = "600"/>
+<img src="./pic/便携式环境监测系统连接手机.jpg" width = "600"/>
+</div>
+
+<div align=center>
+便携式环境监测系统连接手机
 </div>
 
 <div align=center>
 <img src="./pic/探讨设计灵感.jpg" width = "600"/>
 </div>
 
-<这里要不要也来个探讨设计灵感？>
+<div align=center>
+<探讨设计灵感>
+</div>
 
 #四、（软件）设计方案
 
@@ -88,6 +114,10 @@ B. 第二个部分是手机上的数据接收和报警功能部分，通过蓝�
 
 <div align=center>
 <img src="./pic/设备绑定流程图.jpg" width = "600"/>
+</div>
+
+<div align=center>
+设备绑定流程图
 </div>
 
 ##（二）手机端启动环境监测与报警系统。
@@ -106,55 +136,90 @@ B. 第二个部分是手机上的数据接收和报警功能部分，通过蓝�
 <img src="./pic/总体系统流程图.jpg" width = "200"/>
 </div>
 
+<div align=center>
+总体系统流程图
+</div>
+
 #五、（硬件设计方案）元器件采用
 1、主控制器采用SiliconLabs公司的EFM32，它是一款超低功耗控制器，功耗只有目前常规产品的四分之一，在深度睡眠模式下耗电量为900nA，在关机模式下耗电量仅为20nA。并且，低于2μs 的启动时间使其电池寿命延长了至少4倍。并且功能丰富，控制器内部包含许多功能模块，可以通过简单的编程便实现相应功能。
 
 <div align=center>
-<img src="./pic/MCU.jpg" width = "300"/>
+<img src="./pic/主控制器.jpg" width = "300"/>
+</div>
+
+<div align=center>
+主控制器
 </div>
 
 2、蓝牙模块采用采用深圳创思天地科技有限公司的ILT254x-A1低功耗蓝牙模块，采用TI的CC2540 作为核心处理器，模块运行在2.4GHz ISM band，2MHz的通道间隙能更好地防止相邻频道的干扰。同时，输出功率也可以根据需要调节。模块使用串口通信协议进行控制，几乎可以连接到各种单片机芯片，并完成无线数据传输工作，并且其工作时消耗的电流极低，为10mA级，掉电模式和待机模式下电流消耗更低。
 
 <div align=center>
-<img src="./pic/BLEmodle.jpg" width = "300"/>
+<img src="./pic/蓝牙模块.jpg" width = "300"/>
+</div>
+
+<div align=center>
+蓝牙模块
 </div>
 
 3、PM2.5传感器采用夏普的GP2Y1010AU0F，它是一款光学空气质量传感器，其内部对角安放着红外线发光二极管和光电晶体管，使得其能够探测到空气中尘埃反射光，即使非常细小的如烟草烟雾颗粒也能够被检测到，通常在空气净化系统中应用。体积小,重量轻,便于安装，成本低廉，非常适合用在这个项目中。
 
 <div align=center>
-<img src="./pic/PM2.5sensor.jpg" width = "300"/>
+<img src="./pic/PM2.5传感器.jpg" width = "300"/>
+</div>
+
+<div align=center>
+PM2.5传感器
 </div>
 
 4、紫外传感器采用SiliconLabs公司的Si1132，该传感器IC可以在当前照射有害紫外线时发出警告，或计算在运动过程中累加的紫外线照射量。这种传感器对晒伤高风险的人群或担忧过度曝晒的人群极为有用。这个传感器的低功耗待机电流低于500nA，可以延长使用时间。
 
 <div align=center>
-<img src="./pic/UVsensor.jpg" width = "300"/>
+<img src="./pic/紫外传感器.jpg" width = "300"/>
 </div>
 
+<div align=center>
+紫外传感器
+</div>
 
 5、VOC传感器使用的是AMS的CCS811，可以用于大气污染监测、呼出酒精测量、有毒气体（如甲醛）检测等功能。该芯片基于金属氧化物敏感层，采用获专利保护的CMOS MEMS微型热平板技术制造而成，具有非常低的功耗：测量时为1.6mW。同时，这个传感器已经将算法集成在内部，通过IIC总线就可以进行数据读取，使用上非常方便。
 
 <div align=center>
-<img src="./pic/VOCsensor.jpg" width = "700"/>
+<img src="./pic/VOC传感器.jpg" width = "700"/>
+</div>
+
+<div align=center>
+VOC传感器
 </div>
 
 6、温湿度传感器采用SiliconLabs公司的Si7020，它使用集成电路的方法进行温湿度的检测，外形小巧，价格低廉，很适合在这里使用。它可以同时检测温度和湿度，检测精度高：±0.4 °C, ±4 %RH，测量范围广：温度
 -10~+85°C，湿度 0~80%RH，出厂时就已经进行了校准，很适合在这个应用中使用。同时，极低的功耗（60nA）也使得整机的工作时间得以延长。
 
 <div align=center>
-<img src="./pic/TEMPsensor.jpg" width = "300"/>
+<img src="./pic/温湿度传感器.jpg" width = "300"/>
+</div>
+
+<div align=center>
+温湿度传感器
 </div>
 
 7、充电芯片采用TI的BQ24040，它体积比较小，外部电路比较少，使用方便。它可以由USB端口或交流适配器供电。带输入过压保护的高输入电压范围支持低成本、非稳压适配器。有名的小米充电宝里面使用的就是这款芯片，这足以证明这款芯片的性价比以及使用的简便程度。
 
 <div align=center>
-<img src="./pic/Charger.jpg" width = "300"/>
+<img src="./pic/充电芯片.jpg" width = "300"/>
+</div>
+
+<div align=center>
+充电芯片
 </div>
 
 8、电源芯片使用TI的TPS63051，它是一款降压/升压转换器，适用于输入电压高于或低于输出电压的应用。效率比较高，可以达到95%以上，对延长使用时间很有帮助。同时，它可以在整个输入电压范围内针对输出电压进行稳压操作，可根据输入电压自动切换为降压或升压模式，从而在两种模式之间实现无缝转换。十分小巧的体积也让它容易集成到有限的空间中。
 
 <div align=center>
-<img src="./pic/Power.jpg" width = "300"/>
+<img src="./pic/供电芯片.jpg" width = "300"/>
+</div>
+
+<div align=center>
+供电芯片
 </div>
 
 #六、电路与程序设计
@@ -169,6 +234,10 @@ AltiumDesigner软件是世界著名的电路设计工具之一，它可用于原
 <img src="./pic/PCB设计图.jpg" width = "700"/>
 </div>
 
+<div align=center>
+PCB设计图
+</div>
+
 ##（二）传感器检测程序
 
 使用SiliconLabs公司的EFM32作为主控制器，并在ARM公司的Keil软件中进行程序的编写，其编程流程图如下：
@@ -177,11 +246,21 @@ AltiumDesigner软件是世界著名的电路设计工具之一，它可用于原
 <img src="./pic/系统流程图.jpg" width = "300"/>
 </div>
 
-<要不要引用一些代码？>
+<div align=center>
+系统流程图
+</div>
 
 系统分为两个部分，第一个部分为初始化部分：这里声明5个变量，分别为：ucPM代表PM2.5的值，ucUV代表紫外线的值，ucVOC代表甲醛的值，ucTEMP代表温度的值，ucRH代表湿度值。
 
 第二个部分为循环部分，程序默认工作在休眠状态以降低功耗。EFM32中有一个低功耗定时器，综合功耗和性能之后让它每隔一分钟进入一次定时器中断。每次进入中断后先执行中断里的任务，唤醒控制器。然后执行主函数中的读取程序，通过IIC总线依次读取紫外线、甲醛、温度、湿度；启动模数转换器读取PM2.5传感器的值。之后将读取到的数据打包好后通过蓝牙模块发送给手机。
+
+<div align=center>
+<img src="./pic/代码展示.png" width = "300"/>
+</div>
+
+<div align=center>
+代码展示
+</div>
 
 ##（三）手机端程序
 
@@ -200,7 +279,15 @@ AltiumDesigner软件是世界著名的电路设计工具之一，它可用于原
 </div>
 
 <div align=center>
+安装调试1
+</div>
+
+<div align=center>
 <img src="./pic/安装调试2.jpg" width = "300"/>
+</div>
+
+<div align=center>
+安装调试2
 </div>
 
 <拍两张安装和焊接的照片？？>
@@ -208,18 +295,54 @@ AltiumDesigner软件是世界著名的电路设计工具之一，它可用于原
 佩戴便携式环境监测仪：将便携式环境监测仪挂在妈妈的包上，连接手机蓝牙后等待数据传输到手机上。
 
 <div align=center>
-<img src="./pic/安装调试3.jpg" width = "300"/>
+<img src="./pic/佩戴使用.jpg" width = "300"/>
 </div>
-
-<截一个环境模块挂在包上的图片？？>
 
 <div align=center>
-<img src="./pic/数据图表.jpg" width = "300"/>
+<截一个环境模块挂在包上的图片？？>
 </div>
 
-<来个数据图表，显示多组数据？？>
+我把采集到的数据画成了图表，显示在了下面：
 
-<对数据做一下描述>
+<div align=center>
+<img src="./pic/温湿度传感器数据.jpg" width = "600"/>
+</div>
+
+<div align=center>
+温湿度传感器数据
+</div>
+
+这是连续三天的环境温湿度变化情况。
+
+<div align=center>
+<img src="./pic/紫外传感器数据.jpg" width = "600"/>
+</div>
+
+<div align=center>
+紫外传感器数据
+</div>
+
+这是妈妈出去买菜逛街时所晒的紫外线数据。
+
+<div align=center>
+<img src="./pic/VOC传感器数据.png" width = "600"/>
+</div>
+
+<div align=center>
+VOC传感器数据
+</div>
+
+这是妈妈做饭时强烈的油烟让VOC传感器数值迅速增加。
+
+<div align=center>
+<img src="./pic/PM2.5传感器数据.png" width = "600"/>
+</div>
+
+<div align=center>
+PM2.5传感器数据
+</div>
+
+这几天空气的雾霾都比较严重。
 
 <div align=center>
 <img src="./pic/手机界面.jpg" width = "300"/>
@@ -232,7 +355,11 @@ AltiumDesigner软件是世界著名的电路设计工具之一，它可用于原
 ##（一）实物图片
 
 <div align=center>
-<img src="./pic/实物图片1.jpg" width = "300"/>
+<img src="./pic/实物图片1.png" width = "300"/>
+</div>
+
+<div align=center>
+实物图片1
 </div>
 
 <div align=center>
